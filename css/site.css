@@ -17,8 +17,10 @@ p, ul { margin: 0; padding: 0}
     display: flex;
 }
 
+
 .landing-flex-container {
     /* display: none; */
+    display: flex;
     flex-direction: column;
     margin: auto;
 }
