@@ -61,13 +61,9 @@
                     </div>
                 </section>
                 <section class="skills-section">
-                    <header class="section-header">
-                        <span class="header-col-1"></span>
-                        <span class="header-col-2">SKILLS</span>
-                        <span class="header-col-3"></span>
-                    </header>
                     <div class="skills-wrapper">
                         <div class="skill-category">
+                            <img class="skill-category-icon" src="img/lang-icon.png" />
                             <span class="skill-category-header">LANGUAGES</span>
                             <ul class="skill-list">
                                 <li>C#</li>
@@ -78,6 +74,7 @@
                             </ul>
                         </div>
                         <div class="skill-category">
+                            <img class="skill-category-icon" src="img/front-icon.png" />
                             <span class="skill-category-header">FRONT-END</span>
                             <ul class="skill-list">
                                 <li>HTML</li>
@@ -87,6 +84,7 @@
                             </ul>
                         </div>
                         <div class="skill-category">
+                            <img class="skill-category-icon" src="img/server-icon.png" />
                             <span class="skill-category-header">BACK-END</span>
                             <ul class="skill-list">
                                 <li>NODE.JS (EXPRESS)</li>
@@ -96,6 +94,7 @@
                             </ul>
                         </div>
                         <div class="skill-category">
+                            <img class="skill-category-icon" src="img/other-icon.png" />
                             <span class="skill-category-header">OTHER</span>
                             <ul class="skill-list">
                                 <li>GIT</li>
@@ -116,23 +115,47 @@
                     <div class="projects-container">
                         <div class="project prj-1">
                             <div class="project-title">DoorKnock</div>
-                            <p> DoorKnock is an app whose purpose is to knock on doors
-                                as best as it can, unfortunately it was scrapped since
-                                it knocked on too many doors leading to many complaints.
-                            </p>
                             <div class="project-gallery">
-
+                                <img class="project-img" src="img/doorknock.png" alt="DoorKnock"/>
                             </div>
+                            <p> 
+                                DoorKnock is a Windows 10 APP (UWP) designed to be paired with a companion
+                                app on a smartphone. The desktop application handles incoming "knocks" to
+                                notify the user of someone requiring their attention within their local network.
+                            </p>
+                            <p>
+                                I had recently obtained a pair of closed-back headphones, limiting my ability 
+                                to hear stuff around me. I started working on this idea, with communication
+                                within a household in mind. I completed a rough prototype of how the desktop
+                                application would work, however due to lack of hardware (phones) I scrapped
+                                the project.
+                            </p>
+                            <p>
+                                However this gave me some wonderful insights into the development process of a
+                                Windows 10 app and the Universal Windows Platform. The app was mainly coded in C#
+                                with ASP.NET CORE as the main framework.
+                            </p>
                         </div>
                         <div class="project prj-2">
                             <div class="project-title">PalicoDB</div>
-                            <p> DoorKnock is an app whose purpose is to knock on doors
-                                as best as it can, unfortunately it was scrapped since
-                                it knocked on too many doors leading to many complaints.
-                            </p>
                             <div class="project-gallery">
-
+                                <img class="project-img" src="img/pdb-img.png" alt="PalicoDB"/>
                             </div>
+                            <p> 
+                                PalicoDB was created as a sandbox project with the intent of learning more about
+                                the Angular framework. The idea was to create a database website for the popular
+                                game Monster Hunter World. It would keep track of information relating to items
+                                ingame, as well as adding some extra functionality if time and life permitted so.
+                            </p>
+                            <p>
+                                The site itself has an Angular front-end, serviced by a Node.js (Express) back-end.
+                                SQL Server is used to store all information (locally at the moment). In it's current
+                                iteration, the project supports CRUD operations on Items facilitated by a REST API.
+                            </p>
+                            <p>
+                                This sandbox project gave me a lot experience with Angular, letting me learn a bit
+                                on how front-end frameworks operate and what advantages they bring to web development.
+                            </p>
                         </div>
                     </div>
                 </section>
