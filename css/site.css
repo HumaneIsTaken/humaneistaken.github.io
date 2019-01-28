@@ -11,7 +11,6 @@ body {
     background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
      background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 
-
     margin: 0;
     padding: 0;
     font-family: 'Work Sans';
@@ -155,6 +154,7 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
     padding: 0px 5px;
     grid-column: 2;
     font-size: 25px;
+    font-weight: bold;
 }
 .header-col-3 { grid-column: 3;}
 
@@ -176,6 +176,8 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
 
 .skills-section {
     margin: 30px 40px;
+    display: flex;
+    align-items: center;
     grid-column: 2;
     grid-row: 1;
 }
@@ -251,4 +253,38 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
 .project-img {
     max-width: 100%;
     height: auto;    
+}
+
+/* MEDIA QUERIES GO UNDER HERE */
+/* 1024px wide */
+@media only screen and (max-width: 1025px) {
+    .detailed-info-container, .projects-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detailed-info-container {
+        margin-top: 78px;
+    }
+
+    .header-name {
+        font-size: 3.5vw;
+    }
+
+} 
+
+@media only screen and (max-width: 599px) {
+    .main-container, .header-fixed-border, .header-contents {
+        width: 100%;
+    }
+
+    .header-name {
+        font-size: 4vw;
+    }
+
+    .contact-icon {
+        width: 26px;
+        height: 26px;
+        margin: 20px 7px;
+    }
 }
