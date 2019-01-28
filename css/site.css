@@ -23,15 +23,15 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
     background-color: #ffffff;
     margin: auto;
     width: 70%;
-    border-left: 1px solid #b5b5b5;
-    border-right: 1px solid #b5b5b5;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
     display: flex;
 }
 
 
 .landing-flex-container {
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-direction: column;
     margin: auto;
     height: 100vh;
@@ -72,7 +72,7 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
 }
 
 .info-wrapper {
-    display: none; 
+    /* display: none;  */
     height: inherit;
 }
 
@@ -83,10 +83,34 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
     border-bottom: 1px solid black;
 }
 
+.header-fixed-border {
+    position: fixed;
+    display: grid;
+    height: 68px;
+    width: 70%;
+    border-bottom: 3px solid black;
+    grid-template-columns: auto 100px auto;
+    z-index: 2; 
+    pointer-events: none;
+}
+
+.header-icon {
+    grid-column: 2;
+}
+
+.header-contents {
+    position: fixed;
+    display: inline-grid;
+    width: 70%;
+    height: 68px;
+    background-color: white;
+}
+
 .header-name {
     grid-row: 1;
     margin-left: 12px;
     font-size: 36px;
+    align-self: center;
 }
 
 .contact-container {
@@ -111,14 +135,14 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
 .contact-icon {
     width: 32px;
     height: 32px;
-    margin: 9px;
+    margin: 16px 9px;
 }
-
 
 .detailed-info-container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-auto-rows: auto;
+    margin-top: 68px;
 }
 
 .section-header {
