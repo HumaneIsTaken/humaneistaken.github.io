@@ -17,6 +17,8 @@ body {
 }
 
 p, ul { line-height:25px; text-align: justify; padding: 0}
+a, a:visited, a:active { text-decoration: none; color: #000; transition: color 0.4s;}
+a:hover { color: #9f625a; }
 
 .main-container {
     background-color: #ffffff;
@@ -281,18 +283,32 @@ p, ul { line-height:25px; text-align: justify; padding: 0}
 } 
 
 @media only screen and (max-width: 676px) {
-    .main-container, .header-fixed-border, .header-contents {
-        width: 100%;
-    }
+    .main-container, .header-fixed-border, .header-contents { width: 100%; }
 
-    .header-name {
-        font-size: 4vw;
-    }
+    .header-name { font-size: 4vw; }
 
     .contact-icon {
         width: 26px;
         height: 26px;
         margin: 20px 7px;
+    }
+
+    .job-title, .info-big { font-size: 5vw; }
+
+    .name-big {
+        font-size: 14vw;
+        line-height: 10vw;
+    }
+
+    .landing-img {
+        width: 28vw;
+        height: 28vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .name-and-info {
+        margin: 0;
     }
 }
 
