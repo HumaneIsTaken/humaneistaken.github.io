@@ -31,8 +31,8 @@ a:hover { color: #9f625a; }
 
 
 .landing-flex-container {
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-direction: column;
     margin: auto;
     height: 100vh;
@@ -80,7 +80,7 @@ a:hover { color: #9f625a; }
 }
 
 .info-wrapper {
-    display: none; 
+    /* display: none;  */
     height: inherit;
 }
 
@@ -280,6 +280,23 @@ a:hover { color: #9f625a; }
         font-size: 3.5vw;
     }
 
+    .skills-wrapper { width: 100%; }
+
+    .skill-list { text-align: center;}
+    .skill-list li { float: none; margin: 0;}
+
+    .skill-category {
+        grid-template-columns: auto;
+        grid-row-gap: 5px;
+        justify-content: center;
+        justify-items: center;
+        width: 100%;
+        padding: 6px 0px;
+        margin: 6px 0px;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        background: #ededed;
+    }
 } 
 
 @media only screen and (max-width: 676px) {
