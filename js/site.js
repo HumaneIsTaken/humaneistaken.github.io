@@ -18,11 +18,12 @@ var scrollFromLanding = (event) => {
 window.addEventListener("wheel", scrollFromLanding);
 
 
-
 var onLoadLandingAnims = () => {
     const name = document.getElementById("name-big");
     const info = document.getElementById("info-big");
     const jobTitle = document.getElementById("jtitle-wrapper");
+
+    void name.offsetWidth;
 
     // Big name animation.
     name.style.opacity = 1;
@@ -54,4 +55,4 @@ var onLoadLandingAnims = () => {
 
 }
 
-onLoadLandingAnims();
+window.onload = onLoadLandingAnims();

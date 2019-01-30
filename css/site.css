@@ -31,6 +31,7 @@ a:hover { color: #001f3f; }
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     display: flex;
+    overflow-x: hidden;
 }
 
 
@@ -62,10 +63,11 @@ a:hover { color: #001f3f; }
     font-size: 85px;
     line-height: 65px;
     margin-right: 40px;
-
     opacity: 0;
     transform: translateX(-50%);
 
+    -webkit-transition: opacity 1s, transform 1s;
+    -moz-transition: opacity 1s, transform 1s;
     transition: opacity 1s, transform 1s;
 }
 
