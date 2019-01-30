@@ -5,26 +5,28 @@
   <title>Juan Astorga | Personal Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/site.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 </head>
 <body>
     <div class="main-container">
-        <div class="landing-flex-container">
+        <div id="landing-container">
             <img class="landing-img" src="img/hu-img.png" />
             <div class="name-and-info">
-                <div class="name-big">
+                <div id="name-big">
                     <div class="name-half">JUAN</div>
                     <div class="name-half">ASTORGA</div>
                 </div>
-                <div class="info-big">
+                <div id="info-big">
                     <span>MADRID, Spain</span>
-                    <a href="mailto:jastoreu17@outlook.com">jastoreu17@outlook.com</a>
-                    <a href="https://www.github.com/humaneistaken">github.com/humaneistaken</a>
+                    <a class="landing-link" href="mailto:jastoreu17@outlook.com">jastoreu17@outlook.com</a>
+                    <a class="landing-link" href="https://www.github.com/humaneistaken">github.com/humaneistaken</a>
                 </div>
             </div>
-            <div class="job-title">web developer</div>
+            <div id="jtitle-wrapper">
+                <span id="jtitle">web developer</span>    
+            </div>
         </div>
-        <div class="info-wrapper">
+        <div id="info-page-container" class="hidden">
             <div class="header-fixed-border">
                 <img class="header-icon" src="img/header-logo.png">
             </div>
@@ -163,9 +165,19 @@
                         </div>
                     </div>
                 </section>
+                <section class="footer-section">
+                    <div>
+                        Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy (GitHub Icon)</a>,
+                        <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon (E-Mail Icon)</a>,
+                        <a href="https://www.flaticon.com/authors/yannick" title="Dave Gandy">Yannick (Globe Icon)</a>
+                        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by 
+                        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+                    </div>
+                </section>
             </div>        
         </div>        
     </div>
 </body>
+<script src="js/site.js"></script>
 </html>
 
