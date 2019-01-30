@@ -346,7 +346,7 @@ a:hover { color: #001f3f; }
         margin: 20px 7px;
     }
 
-    #job-title, #info-big { font-size: 5vw; }
+    #jtitle, #info-big { font-size: 5vw; }
 
     #name-big {
         font-size: 14vw;
@@ -392,5 +392,5 @@ a:hover { color: #001f3f; }
 @media only screen and (min-width: 1920px) {
     #info-big { font-size: 2vw; }
     #name-big { font-size: 5vw; line-height: 4vw;}
-    #job-title { font-size: 2vw; }
+    #jtitle { font-size: 2vw; }
 }
