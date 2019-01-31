@@ -99,11 +99,10 @@ var scrollTransition = (dir) => {
 
         setTimeout(()=> {
             infoContainerElem.style.opacity = 1;
-        }, 1100);
+        }, 1050);
 
     }
 };
-
 
 window.onload = onLoadLandingAnims();
 window.addEventListener("wheel", scrollFromLanding);

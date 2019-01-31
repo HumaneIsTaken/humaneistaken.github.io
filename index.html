@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Juan Astorga | Personal Page</title>
+
   <link href="css/site.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <link href="/css/jquery.fancybox.min.css" rel="stylesheet">
+  <script src="/js/jquery.fancybox.min.js"></script>
+
 </head>
 <body>
     <div class="main-container">
@@ -123,7 +130,12 @@
                         <div class="project prj-1">
                             <div class="project-title">DoorKnock</div>
                             <div class="project-gallery">
-                                <img class="project-img" src="img/doorknock.png" alt="DoorKnock"/>
+                                <a data-fancybox="project-1" href="img/doorknock.png" data-caption="A quick look at DoorKnock.">
+                                    <img class="project-img" src="img/doorknock.png" alt="DoorKnock"/>
+                                </a>
+                                <a class="display-none" data-fancybox="project-1" href="img/gifs/doorknock.gif" data-caption="DoorKnock in action.">
+                                    <img class="project-img" src="img/doorknock.png" alt="DoorKnock"/>
+                                </a>
                             </div>
                             <p> 
                                 DoorKnock is a Windows 10 APP (UWP) designed to be paired with a companion
@@ -146,7 +158,21 @@
                         <div class="project prj-2">
                             <div class="project-title">PalicoDB</div>
                             <div class="project-gallery">
-                                <img class="project-img" src="img/pdb-img.png" alt="PalicoDB"/>
+                                <a data-fancybox="project-2" href="img/pdb-img.png" data-caption="PalicoDB at a glance.">
+                                    <img class="project-img" src="img/pdb-img.png" alt="PalicoDB"/>
+                                </a>
+                                <a class="display-none" data-fancybox="project-2" href="img/gifs/pdb-add.gif" data-caption="Adding an item.">
+                                    <img class="project-img" src="img/gifs/pdb-add.gif" alt="PalicoDB"/>
+                                </a>
+                                <a class="display-none" data-fancybox="project-2" href="img/gifs/pdb-edit.gif" data-caption="Edit an item.">
+                                    <img class="project-img" src="img/gifs/pdb-edit.gif" alt="PalicoDB"/>
+                                </a>
+                                <a class="display-none" data-fancybox="project-2" href="img/gifs/pdb-search.gif" data-caption="Searching for a specific item.">
+                                    <img class="project-img" src="img/gifs/pdb-search.gif" alt="PalicoDB"/>
+                                </a>
+                                <a class="display-none" data-fancybox="project-2" href="img/gifs/pdb-select.gif" data-caption="Selecting and deleting various items.">
+                                    <img class="project-img" src="img/gifs/pdb-select.gif" alt="PalicoDB"/>
+                                </a>
                             </div>
                             <p> 
                                 PalicoDB was created as a sandbox project with the intent of learning more about
@@ -173,6 +199,12 @@
                         <a href="https://www.flaticon.com/authors/yannick" title="Dave Gandy">Yannick (Globe Icon)</a>
                         from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by 
                         <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+                    </div>
+                    <div>
+                        Lightbox provided by <a href="https://fancyapps.com/fancybox/3/" title="Fancybox">Fancybox</a>
+                    </div>
+                    <div>
+                        For a copy of my resume, send an email to <a href="mailto:jastoreu17@outlook.com">jastoreu17@outlook.com</a>
                     </div>
                 </section>
             </div>        

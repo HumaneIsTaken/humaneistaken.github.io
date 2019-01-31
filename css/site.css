@@ -23,6 +23,7 @@ a:hover { color: #001f3f; }
 .hidden { display: none !important; }
 .opacity-1 { opacity: 1; }
 .opacity-0 { opacity: 0; }
+.display-none { display: none;}
 
 .main-container {
     background-color: #ffffff;
@@ -114,7 +115,7 @@ a:hover { color: #001f3f; }
 #info-page-container {
     height: inherit;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 }
 
 .page-header {
@@ -290,9 +291,11 @@ a:hover { color: #001f3f; }
 
 .project-gallery {
     display: flex;
+    cursor: pointer;
     justify-content: center;
-    background: rgb(41, 41, 41);
+    background: #d2d2d2;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .project-img {
