@@ -43,11 +43,13 @@ a:hover { color: #001f3f; }
     justify-content: center;
 }
 
-.landing-img {
+#landing-img {
     width: 200px;
     height: 200px;
     margin: 0px auto;
     display: none;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .landing-link, .landing-link:visited, .landing-link:active { color: #004287; }
@@ -355,7 +357,7 @@ a:hover { color: #001f3f; }
         line-height: 10vw;
     }
 
-    .landing-img {
+    #landing-img {
         width: 28vw;
         height: 28vw;
         max-width: 200px;
@@ -375,7 +377,6 @@ a:hover { color: #001f3f; }
     #name-big {
         margin: 0;
         padding: 19px 0px;
-        border-bottom: 1px solid black;
     }
 
     .name-half, #info-big {
@@ -386,7 +387,7 @@ a:hover { color: #001f3f; }
         margin: 15px 0px;
     }
 
-    .landing-img {
+    #landing-img {
         display: block;
     }
 }

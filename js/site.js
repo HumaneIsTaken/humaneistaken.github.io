@@ -22,8 +22,12 @@ var onLoadLandingAnims = () => {
     const name = document.getElementById("name-big");
     const info = document.getElementById("info-big");
     const jobTitle = document.getElementById("jtitle-wrapper");
+    const logoImg = document.getElementById("landing-img");
 
     void name.offsetWidth;
+
+    //TODO: Find a better way of making delays.
+    // Also add classes for the transitions instead of inline styles.
 
     // Big name animation.
     name.style.opacity = 1;
@@ -32,6 +36,7 @@ var onLoadLandingAnims = () => {
     // Info animations.
     setTimeout(()=> {
         info.children[0].style.opacity = 1;
+        logoImg.style.opacity = 1;
     }, 1000);
     setTimeout(()=> {
         info.children[1].style.opacity = 1;
