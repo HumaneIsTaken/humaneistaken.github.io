@@ -1,17 +1,21 @@
 var landingScrolled = false;
 var animLocked = false;
 
-const landingContainerElem = 
+let landingContainerElem = 
     document.getElementById("landing-container");
-const infoContainerElem = 
+let infoContainerElem = 
     document.getElementById("info-page-container");
+let dropdownMsgElem = 
+    document.getElementById("dropdown-msg");
 
 var onLoadLandingAnims = () => {
+
     animLocked = true;
     const name = document.getElementById("name-big");
     const info = document.getElementById("info-big");
     const jobTitle = document.getElementById("jtitle-wrapper");
     const logoImg = document.getElementById("landing-img");
+    const scrollMemo = document.getElementById("scroll-memo");
 
     void name.offsetWidth;
 
@@ -22,7 +26,7 @@ var onLoadLandingAnims = () => {
     name.style.opacity = 1;
     name.style.transform = "none";
 
-    // Info animations.
+    // Info animations. WARNING SUPER GROSS CODE AHEAD
     setTimeout(()=> {
         info.children[0].style.opacity = 1;
         logoImg.style.opacity = 1;
@@ -42,9 +46,14 @@ var onLoadLandingAnims = () => {
 
     setTimeout(() => {
         jobTitle.children[0].style.height = "auto";
-        jobTitle.children[0].style.opacity = "1";
+        jobTitle.children[0].style.opacity = 1;
         animLocked = false;
     }, 3500);
+
+    setTimeout(() => {
+        scrollMemo.style.opacity = 1
+        animLocked = false;
+    }, 4200);
 
 }
 
@@ -106,3 +115,38 @@ var scrollTransition = (dir) => {
 
 window.onload = onLoadLandingAnims();
 window.addEventListener("wheel", scrollFromLanding);
+
+var contactClick = (type) => {
+
+    const emailLink = '<a href="mailto:jastoreu17@outlook.com">jastoreu17@outlook.com</a>';
+    const gitLink = '<a href="https://github.com/humaneistaken">https://github.com/humaneistaken</a>';
+    let innerHTML = "";
+
+    switch(type) {
+        case 'world':
+            innerHTML = "I'm currently in Madrid, Spain!";
+            break;
+        case 'git':
+            innerHTML = gitLink;
+            break;
+        case 'mail':
+            innerHTML = emailLink;
+            break;
+    }
+
+    dropdownMsgElem.style.transform = "translateY(-200%)";
+    dropdownMsgElem.style.opacity = 0;
+    dropdownMsgElem.style.display = "flex";
+    dropdownMsgElem.innerHTML = innerHTML;
+
+    setTimeout(() =>{
+        dropdownMsgElem.style.transform = "none";
+        dropdownMsgElem.style.opacity = 1;
+    }, 100)
+
+    setTimeout(() => {
+        dropdownMsgElem.style.opacity = 0;
+        dropdownMsgElem.style.transform = "translateY(-200%)";
+    }, 3000)
+
+};
