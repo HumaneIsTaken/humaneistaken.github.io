@@ -41,6 +41,7 @@ a:hover { color: #001f3f; }
     margin: auto;
     height: 100vh;
     justify-content: center;
+    transition: transform 1s, opacity 1s;
 }
 
 #landing-img {
@@ -112,6 +113,8 @@ a:hover { color: #001f3f; }
 
 #info-page-container {
     height: inherit;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .page-header {

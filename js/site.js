@@ -6,20 +6,6 @@ const landingContainerElem =
 const infoContainerElem = 
     document.getElementById("info-page-container");
 
-var scrollFromLanding = (event) => {
-    if (event.deltaY > 0 && !landingScrolled && !animLocked) {
-        landingSrolled = true;
-        landingContainerElem.classList.add("hidden");
-        infoContainerElem.classList.remove("hidden");
-    }
-}
-
-// Add scroll event listener/functions for mobile devices.
-
-window.addEventListener("wheel", scrollFromLanding);
-window.addEventListener("scroll", scrollFromLanding);
-
-
 var onLoadLandingAnims = () => {
     animLocked = true;
     const name = document.getElementById("name-big");
@@ -60,11 +46,7 @@ var onLoadLandingAnims = () => {
         animLocked = false;
     }, 3500);
 
-
 }
-
-window.onload = onLoadLandingAnims();
-
 
 // credit: http://www.javascriptkit.com/javatutors/touchevents2.shtml
 // and https://codepen.io/ganmahmud/pen/RaoKZa?editors=0010
@@ -95,10 +77,33 @@ function swipeDetect(el, callback){
     }, false)
 }
 
-swipeDetect(window, (dir) => {
-    if (!landingScrolled && !animLocked && dir == "up") {
-        landingSrolled = true;
-        landingContainerElem.classList.add("hidden");
-        infoContainerElem.classList.remove("hidden");
+// On swipe, do transition
+swipeDetect(window, (dir) => scrollTransition(dir));
+// On mouse wheel scroll down, do transition if able
+var scrollFromLanding = (event) => {
+    if (event.deltaY > 0) { scrollTransition(null) }
+}
+
+// Scroll transition function
+var scrollTransition = (dir) => {
+    if (!landingScrolled && !animLocked && (dir ? (dir == "up") : true)) {
+        landingScrolled = true;
+
+        landingContainerElem.style.transform = "translateY(-70%)";
+        landingContainerElem.style.opacity = 0;
+
+        setTimeout(()=> {
+            landingContainerElem.classList.add("hidden");
+            infoContainerElem.classList.remove("hidden");
+        }, 1000);
+
+        setTimeout(()=> {
+            infoContainerElem.style.opacity = 1;
+        }, 1100);
+
     }
-});
+};
+
+
+window.onload = onLoadLandingAnims();
+window.addEventListener("wheel", scrollFromLanding);
