@@ -309,14 +309,19 @@ a:hover { color: #001f3f; }
     display: flex;
     cursor: pointer;
     justify-content: center;
-    background: #d2d2d2;
+    background-color: #d2d2d2;
     padding: 5px;
     border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.project-gallery:hover {
+    background-color: #9c9c9c;
 }
 
 .project-img {
     max-width: 100%;
-    height: auto;    
+    height: auto;
 }
 
 .footer-section {

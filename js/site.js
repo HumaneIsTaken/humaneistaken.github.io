@@ -113,9 +113,7 @@ var scrollTransition = (dir) => {
     }
 };
 
-window.onload = onLoadLandingAnims();
-window.addEventListener("wheel", scrollFromLanding);
-
+// Script for the header contact buttons.
 var contactClick = (type) => {
 
     const emailLink = '<a href="mailto:jastoreu17@outlook.com">jastoreu17@outlook.com</a>';
@@ -150,3 +148,6 @@ var contactClick = (type) => {
     }, 3000)
 
 };
+
+window.onload = onLoadLandingAnims();
+window.addEventListener("wheel", scrollFromLanding);
